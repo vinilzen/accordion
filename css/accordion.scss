@@ -11,7 +11,7 @@
 		background-repeat: no-repeat;
 	}
 	.panel-heading {
-		padding: 16px 15px;
+		padding: 0;
 		background-color: #f8f9f9;
 		border-color:#eaeef3;
 	}
@@ -29,6 +29,7 @@
 		}
 	}
 	.panel-title a {
+		padding: 16px 15px;
 		display: block;
 		cursor: pointer;
 		font-size: 14px;
@@ -59,6 +60,11 @@
 		text-transform: uppercase;
 		font-weight: bold;
 		color:#fff;
+		&:focus {
+			outline: none;
+			outline: 0px auto -webkit-focus-ring-color;
+			outline-offset: 0;
+		}
 	}
 	.btn-success {
 		background-color: #0c953f;
@@ -69,6 +75,11 @@
 		text-align: center;
 		color:#fff;
 		background-image: none;
+		&:focus {
+			outline: none;
+			outline: 0px auto -webkit-focus-ring-color;
+			outline-offset: 0;
+		}
 	}
 	#vector {
 		margin-top: 20px;
