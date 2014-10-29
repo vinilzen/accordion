@@ -86,6 +86,10 @@
 		text-align: center;
 		color:#fff;
 		background-image: none;
+		&:hover {
+			background-color: #0D7C36;
+			border-color:#0D7C36;
+		}
 		&:focus {
 			outline: none;
 			outline: 0px auto -webkit-focus-ring-color;
@@ -95,13 +99,22 @@
 	#vector {
 		margin-top: 20px;
 	}
+	.radio, .checkbox {
+		min-height: 12px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
 }
 
 #leftFilter select.form-control + .chosen-container-multi .chosen-choices li.search-choice {
 	width: 150px;
 }
-/* #leftFilter #accordion {
-	.form-control {
+ #leftFilter #accordion {
+	.form-group.checkbox-slim {
+		margin-bottom: 5px;
+	}
+/*	
+	.form-control{
 		font-size: 13px;
 		height: 40px;
 		padding: 6px 12px;
@@ -124,5 +137,5 @@
 	}
 	::-webkit-input-placeholder {
 		color:#757575;
-	}
-} */
+	}*/
+} 

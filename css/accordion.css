@@ -80,6 +80,10 @@
   color: #fff;
   background-image: none;
 }
+#accordion .btn-success:hover {
+  background-color: #0D7C36;
+  border-color: #0D7C36;
+}
 #accordion .btn-success:focus {
   outline: none;
   outline: 0px auto -webkit-focus-ring-color;
@@ -88,36 +92,45 @@
 #accordion #vector {
   margin-top: 20px;
 }
+#accordion .radio, #accordion .checkbox {
+  min-height: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
 #leftFilter select.form-control + .chosen-container-multi .chosen-choices li.search-choice {
   width: 150px;
 }
 
-/* #leftFilter #accordion {
-	.form-control {
-		font-size: 13px;
-		height: 40px;
-		padding: 6px 12px;
-		// box-shadow: none;
-		// -webkit-box-shadow:none;
-		border-color:#eaeef3;
-		color:#757575;
-		&.jq-selectbox {
-			padding: 0 10px;
-		}
-	}
-	:-ms-input-placeholder {
-		color:#757575;
-	}
-	:-moz-placeholder {
-		color:#757575;
-	}
-	::-moz-placeholder {
-		color:#757575;
-	}
-	::-webkit-input-placeholder {
-		color:#757575;
-	}
-} */
+#leftFilter #accordion {
+  /*	
+  	.form-control{
+  		font-size: 13px;
+  		height: 40px;
+  		padding: 6px 12px;
+  		// box-shadow: none;
+  		// -webkit-box-shadow:none;
+  		border-color:#eaeef3;
+  		color:#757575;
+  		&.jq-selectbox {
+  			padding: 0 10px;
+  		}
+  	}
+  	:-ms-input-placeholder {
+  		color:#757575;
+  	}
+  	:-moz-placeholder {
+  		color:#757575;
+  	}
+  	::-moz-placeholder {
+  		color:#757575;
+  	}
+  	::-webkit-input-placeholder {
+  		color:#757575;
+  	}*/
+}
+#leftFilter #accordion .form-group.checkbox-slim {
+  margin-bottom: 5px;
+}
 
 /*# sourceMappingURL=accordion.css.map */
