@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Doctu.ru – Врачи в Москве, запись на прием, отзывы и рейтинг </title>
+    <meta name="keywords" content="запись на прием к врачу, отзывы" />
+    <meta name="description" content="Здесь вы можете записаться на прием к любому врачу  в Москве " />
+    <meta charset="UTF-8"/>
+    <!--[if lt IE 9 ]>
+    <meta http-equiv="refresh" content="0; url=/browser" />
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+    <script src="http://msk.doctu.ru/assets/templates/design/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+    <script src="/accordion.js" type="text/javascript"></script>
+    <script src="/jquery.formstyler.min.js" type="text/javascript"></script>
+
+
+    <link  href="css/bootstrap.css?v=1413994709" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,cyrillic' rel='stylesheet' type='text/css' />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/accordion.css" rel="stylesheet" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="http://doctu.ru/assets/templates/design/font/font-awesome-ie7.min.css">
+    <![endif]-->
+    <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  </head>
+  <body id="doctorSearchPage">
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div id="logo" class="col-xs-3 hdr-left"> 
+            <a class="logo" href="http://msk.doctu.ru"><img src="assets/templates/design/img/logo_doctu.png"/></a>
+          </div>
+          <div class="col-xs-7 hdr-center">
+            <ul class="list-inline">
+              <li><img class="icon-sm" src="assets/templates/design/img/star.png"><a href="partners" onclick="yaCounter22490281.reachGoal('PARTN')">Партнерство для клиник</a></li>
+              <li><a href="about" onclick="yaCounter22490281.reachGoal('ABOUT')">О проекте</a></li>
+              <li class="zapisLink"><a href="diagnostics">Диагностика</a></li>
+              <script>
+                $("#citySelector").change(function () {
+                  document.location.href = $(this).val();
+                });
+              </script>
+            </ul>
+          </div>
+          <div class="col-xs-3 hdr-right">
+            <div class="city-changer">
+              <a class="showCities" href="#">Москва</a>
+              <ul>
+                <li class="selected"><a href="http://msk.doctu.ru">Москва</a></li>
+                <li><a href="http://doctu.ru">Санкт-Петербург</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+    <div class="row">
+      <div class="col-xs-3 col-left">
+        <aside >
+          <div id="leftFilter">
+
+            <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                      Врачи<span class="ico-collapse"></span>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse lvl1">
+                  <div class="panel-body">
+                    <form role="form">
+
+                      <div class="form-group">
+                        <select class="form-control input-lg">
+                          <option value="1">Cпециализация врача</option>
+                          <option value='akusher'>Акушер</option>
+                          <option value='akusher-ginekolog'>Акушер-гинеколог</option>
+                          <option value='allergolog'>Аллерголог</option>
+                          <option value='angioxirurg'>Ангиохирург</option>
+                          <option value='androlog'>Андролог</option>
+                          <option value='anesteziolog'>Анестезиолог</option>
+                          <option value='apiterapevt'>Апитерапевт</option>
+                          <option value='aritmolog'>Аритмолог</option>
+                          <option value='artrolog'>Артролог</option>
+                          <option value='venerolog'>Венеролог</option>
+                          <option value='vrach-vosstanovitelnoj-mediczinyi'>Врач восстановительной медицины</option>
+                          <option value='vrach-klinicheskoj-lab-rii'>Врач клинической лаборатории</option>
+                          <option value='vrach-mrt'>Врач МРТ</option>
+                          <option value='vrach-obshhej-praktiki'>Врач общей практики</option>
+                          <option value='vrach-po-sportivn.-mediczine'>Врач по спортивной медицине</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control input-lg" id="exampleInputEmail1" placeholder="Район или метро">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control input-lg" id="exampleInputEmail1" placeholder="ФИО врача">
+                      </div>
+                      <hr>
+                      <div class="form-group">
+                        <select class="form-control input-lg">
+                          <option>Пол врача</option>
+                          <option>М</option>
+                          <option>Ж</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <select class="form-control input-lg">
+                          <option>Детск./Взросл.</option>
+                          <option>Да</option>
+                          <option>Нет</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox"> Запись по телефону
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox"> Только с отзывами
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox"> Выезд на дом
+                          </label>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-block btn-primary">Найти</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                      Клиники<span class="ico-collapse"></span>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse lvl1">
+                  <div class="panel-body">
+                    <form role="form">
+                      <div class="form-group">
+                        <select class="form-control input-lg">
+                          <option value="1">Cпециализация врача</option>
+                          <option value='akusher'>Акушер</option>
+                          <option value='akusher-ginekolog'>Акушер-гинеколог</option>
+                          <option value='allergolog'>Аллерголог</option>
+                          <option value='angioxirurg'>Ангиохирург</option>
+                          <option value='androlog'>Андролог</option>
+                          <option value='anesteziolog'>Анестезиолог</option>
+                          <option value='apiterapevt'>Апитерапевт</option>
+                          <option value='aritmolog'>Аритмолог</option>
+                          <option value='artrolog'>Артролог</option>
+                          <option value='venerolog'>Венеролог</option>
+                          <option value='vrach-vosstanovitelnoj-mediczinyi'>Врач восстановительной медицины</option>
+                          <option value='vrach-klinicheskoj-lab-rii'>Врач клинической лаборатории</option>
+                          <option value='vrach-mrt'>Врач МРТ</option>
+                          <option value='vrach-obshhej-praktiki'>Врач общей практики</option>
+                          <option value='vrach-po-sportivn.-mediczine'>Врач по спортивной медицине</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control input-lg" id="exampleInputEmail1" placeholder="Район или метро">
+                      </div>
+                      <hr>
+                      <div class="form-group">
+                        <input type="text" class="form-control input-lg" id="exampleInputEmail1" placeholder="Название клиники">
+                      </div>
+                      <div class="form-group">
+                        <select class="form-control input-lg">
+                          <option>Возможн. записи</option>
+                          <option>М</option>
+                          <option>Ж</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <select class="form-control input-lg">
+                          <option>Категор. клиники</option>
+                          <option>М</option>
+                          <option>Ж</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <select class="form-control input-lg">
+                          <option>Детская/Врослая</option>
+                          <option>Да</option>
+                          <option>Нет</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox"> Только с отзывами
+                          </label>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-block btn-primary">Найти</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                      Диагностика<span class="ico-collapse"></span>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse lvl1">
+                  <div class="panel-body">
+                    <form role="form">
+                      <div class="form-group">
+                        <select class="form-control input-lg">
+                          <option>Вид диагностики</option>
+                          <option>М</option>
+                          <option>Ж</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <select class="form-control input-lg">
+                          <option>Обл. диагностики</option>
+                          <option>Да</option>
+                          <option>Нет</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control input-lg" id="exampleInputEmail1" placeholder="Район или метро">
+                      </div>
+                      <button type="button" class="btn btn-block btn-primary">Найти</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                      запись по омс<span class="ico-collapse"></span>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse lvl1">
+                  <div class="panel-body">
+                    <form role="form">
+                      <div class="form-group">
+                        <input type="text" class="form-control input-lg" id="exampleInputEmail1" placeholder="Район или метро">
+                      </div>
+                      <button type="button" class="btn btn-block btn-primary">Найти</button>
+                      <div id="vector">
+                        <div id="vector1" class="panel-collapse collapse">
+                          <div class="form-group">
+                            <input type="text" class="form-control input-lg" id="exampleInputEmail1" placeholder="Название клиники">
+                          </div>
+
+                          <div class="form-group">
+                            <select class="form-control input-lg">
+                              <option>Возможн. записи</option>
+                              <option>М</option>
+                              <option>Ж</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <select class="form-control input-lg">
+                              <option>Категор. клиники</option>
+                              <option>М</option>
+                              <option>Ж</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <select class="form-control input-lg">
+                              <option>Детская/Врослая</option>
+                              <option>Да</option>
+                              <option>Нет</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox"> Только с отзывами
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <a data-toggle="collapse" data-parent="#vector" href="#vector1" type="button" class="btn btn-block btn-success">Запись по направлению</a>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+  <!--           <ul id="leftTabs" class="nav nav-tabs nav-justified">
+              <li class="active"><a href="#doctorLeft" class="first" data-toggle="tab">Врачи</a></li>
+              <li><a href="#clinicLeft" class="last" data-toggle="tab">Клиники</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="doctorLeft">
+                <form method="get" action="/search/" name="search-doctor" id="searchDoctor">
+                  <input type="hidden" name="search" value="doctors">
+                  <div class="basic-filter">
+                    <div class="form-group">
+                      <select name="speciality" class="form-control" data-placeholder="Cпециализация" id="doctorSpecialitySelectLeft">
+                        <option value=""></option>
+                        <option value='akusher'>Акушер</option>
+                        <option value='akusher-ginekolog'>Акушер-гинеколог</option>
+                        <option value='allergolog'>Аллерголог</option>
+                        <option value='angioxirurg'>Ангиохирург</option>
+                        <option value='androlog'>Андролог</option>
+                        <option value='anesteziolog'>Анестезиолог</option>
+                        <option value='venerolog'>Венеролог</option>
+                        <option value='vrach-klinicheskoj-lab-rii'>Врач клинической лаборатории</option>
+                        <option value='vrach-mrt'>Врач МРТ</option>
+                        <option value='vrach-obshhej-praktiki'>Врач общей практики</option>
+                        <option value='vrach-po-sportivn.-mediczine'>Врач по спортивной медицине</option>
+                        <option value='vrach-uzi'>Врач УЗИ</option>
+                        <option value='gastroehnterolog'>Гастроэнтеролог</option>
+                        <option value='gematolog'>Гематолог</option>
+                        <option value='genetik'>Генетик</option>
+                        <option value='gepatolog'>Гепатолог</option>
+                        <option value='ginekolog'>Гинеколог</option>
+                        <option value='ginekolog-reproduktolog'>Гинеколог-репродуктолог</option>
+                        <option value='ginekolog-endokrinolog'>Гинеколог-эндокринолог</option>
+                        <option value='girudoterapevt'>Гирудотерапевт</option>
+                        <option value='dermatovenerolog'>Дерматовенеролог</option>
+                        <option value='dermatokosmetolog'>Дерматокосметолог</option>
+                        <option value='dermatolog'>Дерматолог</option>
+                        <option value='dietolog'>Диетолог</option>
+                        <option value='iglorefleksoterapevt'>Иглорефлексотерапевт</option>
+                        <option value='immunolog'>Иммунолог</option>
+                        <option value='infekcionist'>Инфекционист</option>
+                        <option value='kardiolog'>Кардиолог</option>
+                        <option value='kinezoterapevt'>Кинезотерапевт</option>
+                        <option value='koloproktolog'>Колопроктолог</option>
+                        <option value='kosmetolog'>Косметолог</option>
+                        <option value='logoped'>Логопед</option>
+                        <option value='lor-otolaringolog'>Лор (отоларинголог)</option>
+                        <option value='manualnyjj-terapevt'>Мануальный терапевт</option>
+                        <option value='mammolog'>Маммолог</option>
+                        <option value='massazhist'>Массажист</option>
+                        <option value='mikolog'>Миколог</option>
+                        <option value='nevrolog'>Невролог</option>
+                        <option value='nefrolog'>Нефролог</option>
+                        <option value='okulist-oftalmolog'>Окулист (офтальмолог)</option>
+                        <option value='onkolog'>Онколог</option>
+                        <option value='ortoped'>Ортопед</option>
+                        <option value='osteopat'>Остеопат</option>
+                        <option value='pediatr'>Педиатр</option>
+                        <option value='proktolog'>Проктолог</option>
+                        <option value='profpatolog'>Профпатолог</option>
+                        <option value='psikhiatr'>Психиатр</option>
+                        <option value='psikholog'>Психолог</option>
+                        <option value='psikhoterapevt'>Психотерапевт</option>
+                        <option value='pulmonolog'>Пульмонолог</option>
+                        <option value='radiolog'>Радиолог</option>
+                        <option value='reanimatolog'>Реаниматолог</option>
+                        <option value='revmatolog'>Ревматолог</option>
+                        <option value='rentgenolog'>Рентгенолог</option>
+                        <option value='reproduktolog-ehko'>Репродуктолог (ЭКО)</option>
+                        <option value='refleksoterapevt'>Рефлексотерапевт</option>
+                        <option value='seksolog'>Сексолог</option>
+                        <option value='semejnyij-vrach'>Семейный врач</option>
+                        <option value='stomatolog'>Стоматолог</option>
+                        <option value='stomatolog-gigienist'>Стоматолог-гигиенист</option>
+                        <option value='stomatolog-implantolog'>Стоматолог-имплантолог</option>
+                        <option value='stomatolog-ortodont'>Стоматолог-ортодонт</option>
+                        <option value='stomatolog-ortoped'>Стоматолог-ортопед</option>
+                        <option value='stomatolog-parodontolog'>Стоматолог-пародонтолог</option>
+                        <option value='stomatolog-terapevt'>Стоматолог-терапевт</option>
+                        <option value='stomatolog-xirurg'>Стоматолог-хирург</option>
+                        <option value='surdolog'>Сурдолог</option>
+                        <option value='terapevt'>Терапевт</option>
+                        <option value='terapevt-uchastkovyij'>Терапевт участковый</option>
+                        <option value='travmatolog'>Травматолог</option>
+                        <option value='trikholog'>Трихолог</option>
+                        <option value='uzi-specialist'>УЗИ-специалист</option>
+                        <option value='urolog'>Уролог</option>
+                        <option value='urolog-androlog'>Уролог-андролог</option>
+                        <option value='fizioterapevt'>Физиотерапевт</option>
+                        <option value='flebolog'>Флеболог</option>
+                        <option value='ftiziatr'>Фтизиатр</option>
+                        <option value='funczionalnyij-diagnost'>Фунциональный диагност</option>
+                        <option value='khirurg'>Хирург</option>
+                        <option value='xirurg-plasticheskij'>Хирург пластический</option>
+                        <option value='xirurg-sosudistyij'>Хирург сосудистый</option>
+                        <option value='xirurg-torakalnyij'>Хирург торакальный</option>
+                        <option value='xirurg-oftalmolog'>Хирург-офтальмолог</option>
+                        <option value='xirurg-travmatolog'>Хирург-травматолог</option>
+                        <option value='xirurg-flebolog'>Хирург-флеболог</option>
+                        <option value='xirurg-chelyustno-liczevoj'>Хирург челюстно-лицевой</option>
+                        <option value='embriolog'>Эмбриолог</option>
+                        <option value='ehndokrinolog'>Эндокринолог</option>
+                        <option value='endoskopist'>Эндоскопист</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <select name="metro[]"  class="form-control" data-placeholder="Район или метро"  id="doctorMetroSelectLeft" multiple>
+                        <optgroup label="Районы">
+                          <option value=""></option>
+                          <option value='czao'>ЦАО</option>
+                          <option value='svao'>СВАО</option>
+                          <option value='vao'>ВАО</option>
+                          <option value='yuvao'>ЮВАО</option>
+                          <option value='zao'>ЗАО</option>
+                          <option value='szao'>СЗАО</option>
+                        </optgroup>
+                        <optgroup label="Метро">
+                          <option value=""></option>
+                          <option value='alekseevskaya'>Алексеевская</option>
+                          <option value='babushkinskaya'>Бабушкинская</option>
+                          <option value='belorusskaya'>Белорусская</option>
+                          <option value='botanicheskij-sad'>Ботанический сад</option>
+                          <option value='bratislavskaya'>Братиславская</option>
+                          <option value='bulvar-dmitriya-donskogo'>Бульвар Дмитрия Донского</option>
+                          <option value='buninskaya-alleya'>Бунинская аллея</option>
+                          <option value='vdnx'>ВДНХ</option>
+                          <option value='vladyikino'>Владыкино</option>
+                          <option value='vodnyij-stadion'>Водный стадион</option>
+                          <option value='vojkovskaya'>Войковская</option>
+                          <option value='novocherkasskaya'>Новочеркасская</option>
+                          <option value='dinamo'>Динамо</option>
+                          <option value='kunczevskaya'>Кунцевская</option>
+                          <option value='lermontovskij-prospekt'>Лермонтовский проспект</option>
+                          <option value='lyublino'>Люблино</option>
+                          <option value='marina-roshha'>Марьина роща</option>
+                          <option value='mayakovskaya-msk'>Маяковская</option>
+                          <option value='medvedkovo'>Медведково</option>
+                          <option value='mendeleevskaya'>Менделеевская</option>
+                          <option value='mitino'>Митино</option>
+                          <option value='molodyozhnaya'>Молодёжная</option>
+                          <option value='novogireevo'>Новогиреево</option>
+                          <option value='novokuzneczkaya'>Новокузнецкая</option>
+                          <option value='oxotnyij-ryad'>Охотный ряд</option>
+                          <option value='paveleczkaya'>Павелецкая</option>
+                          <option value='park-pobedyi-msk'>Парк Победы</option>
+                          <option value='pervomajskaya'>Первомайская</option>
+                          <option value='petrovsko-razumovskaya'>Петровско-Разумовская</option>
+                          <option value='planernaya'>Планерная</option>
+                          <option value='pushkinskaya'>Пушкинская</option>
+                          <option value='rechnoj-vokzal'>Речной вокзал</option>
+                          <option value='rizhskaya'>Рижская</option>
+                          <option value='savyolovskaya'>Савёловская</option>
+                          <option value='sviblovo'>Свиблово</option>
+                          <option value='slavyanskij-bulvar'>Славянский бульвар</option>
+                          <option value='tverskaya'>Тверская</option>
+                          <option value='tekstilshhiki'>Текстильщики</option>
+                          <option value='tretyakovskaya'>Третьяковская</option>
+                          <option value='tushinskaya'>Тушинская</option>
+                          <option value='ulicza-gorchakova'>Улица Горчакова</option>
+                          <option value='ulicza-starokachalovskaya'>Улица Старокачаловская</option>
+                          <option value='shhyolkovskaya'>Щёлковская</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                    <button type="submit" class="btn btn-info btn-block">Найти</button>
+                  </div>
+                  <div id="doctLeftAdv" class="adv-filter">
+                    <div class="form-group">
+                      <label class="" for="">ФИО врача:</label>
+                      <input type="text" id="doctor_name" class="form-control" name="name" value=""  form="searchDoctor" placeholder="" autocomplete="off"/>
+                    </div>
+                    <div class="form-group">
+                      <label class="" for="">Стоимость приема:</label>
+                      <input name="priceLevelRange" type="text" id="priceSliderDoctorLeft" name="rangeName"  data-from="" data-to="" value="0;5000" />
+                    </div>
+                    <div class="form-group">
+                      <label for="">Пол врача:</label>
+                      <select name="sex"  class="form-control">
+                        <option value="">Не важно</option>
+                        <option value="male"   >Мужской</option>
+                        <option value="female" >Женский</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="">Детский/Взрослый:</label>
+                      <select name="age"  class="form-control">
+                        <option value="">Не важно</option>
+                        <option value="child" >Детский</option>
+                        <option value="adult" >Взрослый</option>
+                      </select>
+                    </div>
+                    <div class="checkbox"><label><input name="bookingType" value="phone" type="checkbox" >Запись по телефону</label></div>
+                    <div class="checkbox"><label><input name="haveRating" value="1" type="checkbox" >Только с отзывами</label></div>
+                    <div class="checkbox"><label><input name="homevisit" value="1" type="checkbox" >Выезд на дом</label></div>
+                  </div>
+                </form>
+              </div>
+              <div class="tab-pane" id="clinicLeft">
+                <div class="tab-pane active" id="clinicLeft">
+                  <form method="get" action="/search/" name="search-clinic" id="searchClinic">
+                    <input type="hidden" name="search" value="clinics">
+                    <div class="basic-filter">
+                      <div class="form-group">
+                        <select  name="speciality" class="form-control" data-placeholder="Cпециализация" id="clinicSpecialitySelectLeft">
+                          <option value=""></option>
+                          <option value='akusherstvo'>Акушерство</option>
+                          <option value='allergologija'>Аллергология</option>
+                          <option value='andrologija'>Андрология</option>
+                          <option value='anesteziologija-i-reanimatologija'>Анестезиология и реаниматология</option>
+                          <option value='vakcinacija'>Вакцинация</option>
+                          <option value='vertebrologija'>Вертебрология</option>
+                          <option value='gastroehnterologija'>Гастроэнтерология</option>
+                          <option value='gematologija'>Гематология</option>
+                          <option value='gepatologija'>Гепатология</option>
+                          <option value='ginekologija'>Гинекология</option>
+                          <option value='girudoterapija'>Гирудотерапия</option>
+                          <option value='dermatovenerologija'>Дерматовенерология</option>
+                          <option value='diagnostika'>Диагностика</option>
+                          <option value='kompjuternaja-tomografija-kt'>&nbsp;&nbsp;&nbsp;&nbsp; Компьютерная томография (КТ)</option>
+                          <option value='magnito-rezonansnaja-tomografija-mrt'>&nbsp;&nbsp;&nbsp;&nbsp; Магнитно-резонансная томография (МРТ)</option>
+                          <option value='rentgen'>&nbsp;&nbsp;&nbsp;&nbsp; Рентген</option>
+                          <option value='ultrazvukovoe-issledovanie-uzi'>&nbsp;&nbsp;&nbsp;&nbsp; Ультразвуковое исследование (УЗИ)</option>
+                          <option value='ehlektrokardiografija-ehkg'>&nbsp;&nbsp;&nbsp;&nbsp; Электрокардиография (ЭКГ)</option>
+                          <option value='ehlektroehncefalogramma-ehehg'>&nbsp;&nbsp;&nbsp;&nbsp; Электроэнцефалограмма (ЭЭГ)</option>
+                          <option value='ehndoskopicheskaja-ehzofagogastroduodenoskopija-ehfgds'>&nbsp;&nbsp;&nbsp;&nbsp; Эндоскопическая эзофагогастродуоденоскопия (ЭФГДС)</option>
+                          <option value='ehkhokardiografija-ehkhokg'>&nbsp;&nbsp;&nbsp;&nbsp; Эхокардиография (ЭхоКГ)</option>
+                          <option value='dietologija'>Диетология</option>
+                          <option value='immunologija'>Иммунология</option>
+                          <option value='kardiologija'>Кардиология</option>
+                          <option value='kardiokhirurgija'>Кардиохирургия</option>
+                          <option value='kosmetologija'>Косметология</option>
+                          <option value='laboratornaja-diagnostika'>Лабораторная диагностика</option>
+                          <option value='logopedija'>Логопедия</option>
+                          <option value='lfk'>ЛФК</option>
+                          <option value='mammologija'>Маммология</option>
+                          <option value='manualnaja-terapija'>Мануальная терапия</option>
+                          <option value='massazh'>Массаж</option>
+                          <option value='nevrologija'>Неврология</option>
+                          <option value='nefrologija'>Нефрология</option>
+                          <option value='onkologija'>Онкология</option>
+                          <option value='otolaringologija-lor'>Отоларингология (ЛОР)</option>
+                          <option value='oftalmologija'>Офтальмология</option>
+                          <option value='pediatrija'>Педиатрия</option>
+                          <option value='plasticheskaja-khirurgija'>Пластическая хирургия</option>
+                          <option value='proktologija'>Проктология</option>
+                          <option value='pulmonologija'>Пульмонология</option>
+                          <option value='revmatologija'>Ревматология</option>
+                          <option value='refleksoterapija'>Рефлексотерапия</option>
+                          <option value='stomatologija'>Стоматология</option>
+                          <option value='gigiena-i-profilaktika'>&nbsp;&nbsp;&nbsp;&nbsp;Гигиена и профилактика</option>
+                          <option value='detskaja-stomatologija'>&nbsp;&nbsp;&nbsp;&nbsp;Детская стоматология</option>
+                          <option value='implantologija'>&nbsp;&nbsp;&nbsp;&nbsp;Имплантология</option>
+                          <option value='ortodontija'>&nbsp;&nbsp;&nbsp;&nbsp;Ортодонтия</option>
+                          <option value='ortopedicheskaja-stomatologija'>&nbsp;&nbsp;&nbsp;&nbsp;Ортопедическая стоматология</option>
+                          <option value='terapija'>Терапия</option>
+                          <option value='travmatologija-i-ortopedija'>Травматология и ортопедия</option>
+                          <option value='urologija'>Урология</option>
+                          <option value='flebologija'>Флебология</option>
+                          <option value='khirurgija'>Хирургия</option>
+                          <option value='ehndokrinologija'>Эндокринология</option>
+                          <option value='ehndoskopija'>Эндоскопия</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <select name="metro[]" class="form-control" data-placeholder="Район или метро" id="clinicSpecialitySelectLeft" multiple>
+                          <optgroup label="Районы">
+                            <option value=""></option>
+                            <option value='czao'>ЦАО</option>
+                            <option value='svao'>СВАО</option>
+                            <option value='vao'>ВАО</option>
+                            <option value='yuvao'>ЮВАО</option>
+                            <option value='zao'>ЗАО</option>
+                            <option value='szao'>СЗАО</option>
+                          </optgroup>
+                          <optgroup label="Метро">
+                            <option value=""></option>
+                            <option value='alekseevskaya'>Алексеевская</option>
+                            <option value='babushkinskaya'>Бабушкинская</option>
+                            <option value='belorusskaya'>Белорусская</option>
+                            <option value='botanicheskij-sad'>Ботанический сад</option>
+                            <option value='bratislavskaya'>Братиславская</option>
+                            <option value='bulvar-dmitriya-donskogo'>Бульвар Дмитрия Донского</option>
+                            <option value='buninskaya-alleya'>Бунинская аллея</option>
+                            <option value='vdnx'>ВДНХ</option>
+                            <option value='vladyikino'>Владыкино</option>
+                            <option value='vodnyij-stadion'>Водный стадион</option>
+                            <option value='vojkovskaya'>Войковская</option>
+                            <option value='novocherkasskaya'>Новочеркасская</option>
+                            <option value='dinamo'>Динамо</option>
+                            <option value='kunczevskaya'>Кунцевская</option>
+                            <option value='lermontovskij-prospekt'>Лермонтовский проспект</option>
+                            <option value='lyublino'>Люблино</option>
+                            <option value='marina-roshha'>Марьина роща</option>
+                            <option value='mayakovskaya-msk'>Маяковская</option>
+                            <option value='medvedkovo'>Медведково</option>
+                            <option value='mendeleevskaya'>Менделеевская</option>
+                            <option value='mitino'>Митино</option>
+                            <option value='molodyozhnaya'>Молодёжная</option>
+                            <option value='novogireevo'>Новогиреево</option>
+                            <option value='novokuzneczkaya'>Новокузнецкая</option>
+                            <option value='oxotnyij-ryad'>Охотный ряд</option>
+                            <option value='paveleczkaya'>Павелецкая</option>
+                            <option value='park-pobedyi-msk'>Парк Победы</option>
+                            <option value='pervomajskaya'>Первомайская</option>
+                            <option value='petrovsko-razumovskaya'>Петровско-Разумовская</option>
+                            <option value='planernaya'>Планерная</option>
+                            <option value='pushkinskaya'>Пушкинская</option>
+                            <option value='rechnoj-vokzal'>Речной вокзал</option>
+                            <option value='rizhskaya'>Рижская</option>
+                            <option value='savyolovskaya'>Савёловская</option>
+                            <option value='sviblovo'>Свиблово</option>
+                            <option value='slavyanskij-bulvar'>Славянский бульвар</option>
+                            <option value='tverskaya'>Тверская</option>
+                            <option value='tekstilshhiki'>Текстильщики</option>
+                            <option value='tretyakovskaya'>Третьяковская</option>
+                            <option value='tushinskaya'>Тушинская</option>
+                            <option value='ulicza-gorchakova'>Улица Горчакова</option>
+                            <option value='ulicza-starokachalovskaya'>Улица Старокачаловская</option>
+                            <option value='shhyolkovskaya'>Щёлковская</option>
+                          </optgroup>
+                        </select>
+                      </div>
+                      <button type="submit" class="btn btn-info btn-block">Найти</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div> -->
+            <script>
+              $(document).ready(function() {
+                $('#leftTabs a:first').tab('show');
+              })
+            </script>
+        </aside>
+        </div>
+        <div class="col-xs-9 col-right">
+          <div id="searchResults">
+            <div class="seo">
+              <h1>Вы искали: Врачи в Москве  </h1>
+            </div>
+            <section class="bestDoctors">
+              <div class="h2">Лучшие врачи данной специализации</div>
+              <div class="doc-section col-xs-4 spec368 spec315 spec329 spec0 spec0" 
+                data-doctor="" 
+                data-name="Владимир Владимирович" 
+                data-family="Лапин" 
+                data-speciality="<h3><a href='/doctors/koloproktolog'>Колопроктолог</a></h3>, <h3><a href='/doctors/proktolog'>Проктолог</a></h3>, <h3><a href='/doctors/khirurg'>Хирург</a></h3>" 
+                data-photo="" 
+                data-metro="" 
+                data-address="" 
+                data-clinicphone=""
+                data-clinicUrl="" 
+                data-clinicLogo="">
+                <div class="doc-name">
+                  <a href="doctor/lapin-vladimir-vladimirovich" target="_blank">
+                    <img src="https://cdn.doctu.ru/images/thumb/74x110/74x110-a00545dd91bc962ecb320baa59a6587d.jpg" width="74" height="110"/>
+                    <h4 class="h3">Лапин</h4>
+                    <h4>Владимир Владимирович</h4>
+                  </a>
+                  <div class="specialty">
+                    <div class="spec">
+                      <h3><a href='/doctors/koloproktolog'>Колопроктолог</a></h3>
+                      , 
+                      <h3><a href='/doctors/proktolog'>Проктолог</a></h3>
+                      , 
+                      <h3><a href='/doctors/khirurg'>Хирург</a></h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="clearfix"></div>
+            </section>
+            <div id="doctorSort" class="row">
+              <div class="col-xs-5 result" >Найдено <span class='green'>536</span> врачей</div>
+              <div class="col-xs-4 sort-type">
+                <label for="">Сортировать</label>
+                <select name="sort" class="form-control" for="searchDoctor">
+                  <option value="">не важно</option>
+                  <option value="rating" >по рейтингу</option>
+                  <option value="price" >по стоимости</option>
+                  <option value="experience" >по стажу</option>
+                </select>
+              </div>
+              <div class="col-xs-3 sort-num">
+                <label for="">Показывать по </label>
+                <select name="paging" class="form-control" for="searchDoctor">
+                  <option>10</option>
+                  <option >25</option>
+                  <option >50</option>
+                </select>
+              </div>
+              <div class="border"></div>
+            </div>
+            <a href="/doctors-map/" class="showDoctorsOnMap msk">Показать на карте</a>  
+            <section id="doctorList" class="doc-list">
+              <section class="doc" 
+                data-doctor="Gn6M2Lc7lKIE1nG1" 
+                data-name="Мурат Магомедович" 
+                data-family="Занибеков" 
+                data-speciality="Хирург" 
+                data-photo="https://cdn.doctu.ru/images/thumb/74x110/74x110-6a67e02fe428ace16d38b74e60c79597.jpg" 
+                data-metro="<span class='linemsk5'>Белорусская</span> <span class='linemsk9'>Менделеевская</span> <span class='line4'>Новочеркасская</span> " 
+                data-address="ул. Лесная, д. 57, стр. 1"  
+                data-clinicphone="+7(495)966‑02‑52"
+                data-clinicurl="smclinic.doctu.ru/"
+                data-clinicLogo="https://cdn.doctu.ru/images/thumb/74x74/74x74-646ad833d7fcd7681f52167c5b2503ea.jpg">
+                <div class="row doc-section">
+                  <div class="col-xs-5 doc-name">
+                    <a href="doctor/zanibekov-murat-magomedovich" target="_blank">
+                      <img class="avatar" src="https://cdn.doctu.ru/images/thumb/74x110/74x110-6a67e02fe428ace16d38b74e60c79597.jpg" width="74" alt="Хирург Занибеков Мурат Магомедович"/>
+                      <h4 class="h3">Занибеков</h4>
+                      <h4>Мурат Магомедович</h4>
+                    </a>
+                    <div class="specialty">
+                      <h3><a href='/doctors/khirurg'>Хирург</a></h3>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 doc-options">
+                    <div class="metro"><span class='linemsk5'>Белорусская</span> <span class='linemsk9'>Менделеевская</span> <span class='line4'>Новочеркасская</span> </div>
+                    <div class="address"><img src="/assets/templates/design/less/img/address.png"><a class="mapModal" href="#mapModal" data-mapId='map' data-markLat='55.781822' data-markLong='37.593201' data-mapZoom='15' data-markHeader='<a href="http://smclinic.doctu.ru/">СМ-Клиника на Лесной</a>' data-markContent='ул. Лесная, д. 57, стр. 1'>ул. Лесная, д. 57, стр. 1</a></div>
+                    <div class="experience"><img src="/assets/templates/design/less/img/experience.png">Стаж — 5 лет</div>
+                    <div class="consult"><img src="/assets/templates/design/less/img/consult.png"><b>Консультация — 1300<span class='rub'>Р</span></b></div>
+                  </div>
+                  <div class="col-xs-3 doc-request">
+                    <div class="rating">0.0</div>
+                    <div class="star-rating"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"></div>
+                    <div class="reviews"><a class="doctorReview" href="doctor/zanibekov-murat-magomedovich#feedback">Нет отзывов</a></div>
+                    <button class="btn btn-success showPhoneScheduleBtn">Записаться на прием</button>
+                  </div>
+                </div>
+                <div class="collapse doc-table-sect doctorScheduleCollapse" >   
+                </div>
+                <div id="ajaxClinicPriceReq" class="services-list">
+                </div>
+                <div id="ajaxPricelist" class="collapse doc-table-sect services-list doctorPricelist">
+                  <h3 class="head">Услуги и цены</h3>
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="loading"></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr class="clearfix">
+              </section>
+              <section class="doc" 
+                data-doctor="8g4kmS5nVibcXnxs" 
+                data-name="Ольга Евгеньевна" 
+                data-family="Шилоносова" 
+                data-speciality="Лор (отоларинголог)" 
+                data-photo="https://cdn.doctu.ru/images/thumb/74x110/74x110-290b4ce9074e1a3cec4bef082775f6c3.jpg" 
+                data-metro="<span class='linemsk6'>Медведково</span> <span class='linemsk6'>Бабушкинская</span> " 
+                data-address="Московская область, г. Мытищи, ул.Колонцова, д. 5"  
+                data-clinicphone="+7(495)510‑43‑01"
+                data-clinicurl="msk-medongroup.doctu.ru/"
+                data-clinicLogo="https://cdn.doctu.ru/images/thumb/74x74/74x74-f48c2c23d147330d5e723b706e169cbb.jpg">
+                <div class="row doc-section">
+                  <div class="col-xs-5 doc-name">
+                    <a href="doctor/shilonosova-olga-evgenevna" target="_blank">
+                      <img class="avatar" src="https://cdn.doctu.ru/images/thumb/74x110/74x110-290b4ce9074e1a3cec4bef082775f6c3.jpg" width="74" alt="Лор (отоларинголог) Шилоносова Ольга Евгеньевна"/>
+                      <h4 class="h3">Шилоносова</h4>
+                      <h4>Ольга Евгеньевна</h4>
+                    </a>
+                    <div class="specialty">
+                      <h3><a href='/doctors/lor-otolaringolog'>Лор (отоларинголог)</a></h3>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 doc-options">
+                    <div class="metro"><span class='linemsk6'>Медведково</span> <span class='linemsk6'>Бабушкинская</span> </div>
+                    <div class="address"><img src="/assets/templates/design/less/img/address.png"><a class="mapModal" href="#mapModal" data-mapId='map' data-markLat='55.913460' data-markLong='37.763882' data-mapZoom='14' data-markHeader='<a href="http://msk-medongroup.doctu.ru/">Medical On Group - Мытищи</a>' data-markContent='Московская область, г. Мытищи, ул.Колонцова, д. 5'>Московская область, г. Мытищи, ул.Колонцова, д. 5</a></div>
+                    <div class="experience"><img src="/assets/templates/design/less/img/experience.png">Стаж — 2 года</div>
+                    <div class="consult"><img src="/assets/templates/design/less/img/consult.png"><b>Консультация — 1100<span class='rub'>Р</span></b></div>
+                  </div>
+                  <div class="col-xs-3 doc-request">
+                    <div class="rating">0.0</div>
+                    <div class="star-rating"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"></div>
+                    <div class="reviews"><a class="doctorReview" href="doctor/shilonosova-olga-evgenevna#feedback">Нет отзывов</a></div>
+                    <button class="btn btn-success showPhoneScheduleBtn">Записаться на прием</button>
+                  </div>
+                </div>
+                <div class="collapse doc-table-sect doctorScheduleCollapse" >   
+                </div>
+                <div id="ajaxClinicPriceReq" class="services-list">
+                </div>
+                <div id="ajaxPricelist" class="collapse doc-table-sect services-list doctorPricelist">
+                  <h3 class="head">Услуги и цены</h3>
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="loading"></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr class="clearfix">
+              </section>
+              <section class="doc" 
+                data-doctor="clf311htbBPjTP8D" 
+                data-name="Надежда Ниловна" 
+                data-family="Сушилина" 
+                data-speciality="Врач УЗИ" 
+                data-photo="https://cdn.doctu.ru/images/thumb/74x110/74x110-9700f01769537e84ac7a51cbb6800609.jpg" 
+                data-metro="<span class='linemsk3'>Первомайская</span> <span class='linemsk8'>Новогиреево</span> " 
+                data-address="Московская область, г. Балашиха, ул. Советская, д. 42"  
+                data-clinicphone="+7(495)510‑43‑01"
+                data-clinicurl="medongroup.doctu.ru/"
+                data-clinicLogo="https://cdn.doctu.ru/images/thumb/74x74/74x74-14ebfb89daae1bd7bd9d51408633acd7.jpg">
+                <div class="row doc-section">
+                  <div class="col-xs-5 doc-name">
+                    <a href="doctor/sushilina-nadezhda-nilovna" target="_blank">
+                      <img class="avatar" src="https://cdn.doctu.ru/images/thumb/74x110/74x110-9700f01769537e84ac7a51cbb6800609.jpg" width="74" alt="Врач УЗИ Сушилина Надежда Ниловна"/>
+                      <h4 class="h3">Сушилина</h4>
+                      <h4>Надежда Ниловна</h4>
+                    </a>
+                    <div class="specialty">
+                      <h3><a href='/doctors/vrach-uzi'>Врач УЗИ</a></h3>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 doc-options">
+                    <div class="metro"><span class='linemsk3'>Первомайская</span> <span class='linemsk8'>Новогиреево</span> </div>
+                    <div class="address"><img src="/assets/templates/design/less/img/address.png"><a class="mapModal" href="#mapModal" data-mapId='map' data-markLat='55.814617' data-markLong='37.955006' data-mapZoom='16' data-markHeader='<a href="http://medongroup.doctu.ru/">Medical On Group - Балашиха</a>' data-markContent='Московская область, г. Балашиха, ул. Советская, д. 42'>Московская область, г. Балашиха, ул. Советская, д. 42</a></div>
+                    <div class="experience"><img src="/assets/templates/design/less/img/experience.png">Стаж — 25 лет</div>
+                    <div class="consult"><img src="/assets/templates/design/less/img/consult.png"><strong>Стоимость не указана</strong></div>
+                  </div>
+                  <div class="col-xs-3 doc-request">
+                    <div class="rating">0.0</div>
+                    <div class="star-rating"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"></div>
+                    <div class="reviews"><a class="doctorReview" href="doctor/sushilina-nadezhda-nilovna#feedback">Нет отзывов</a></div>
+                    <button class="btn btn-success showPhoneScheduleBtn">Записаться на прием</button>
+                  </div>
+                </div>
+                <div class="collapse doc-table-sect doctorScheduleCollapse" >   
+                </div>
+                <div id="ajaxClinicPriceReq" class="services-list">
+                </div>
+                <div id="ajaxPricelist" class="collapse doc-table-sect services-list doctorPricelist">
+                  <h3 class="head">Услуги и цены</h3>
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="loading"></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr class="clearfix">
+              </section>
+              <section class="doc" 
+                data-doctor="tfJmtTPiTZObmNXz" 
+                data-name="Хачатур Михайлович" 
+                data-family="Кургинян" 
+                data-speciality="Флеболог, Хирург-флеболог" 
+                data-photo="https://cdn.doctu.ru/images/thumb/74x110/74x110-1492e3666b513c2e33bc888ef53fe315.jpg" 
+                data-metro="<span class='linemsk7'>Лермонтовский проспект</span> " 
+                data-address="Московская область, г. Люберцы, Октябрьский пр-кт, д. 5"  
+                data-clinicphone="+7(495)510‑43‑01"
+                data-clinicurl="medongroup.doctu.ru/"
+                data-clinicLogo="https://cdn.doctu.ru/images/thumb/74x74/74x74-632bd7ca72397e6ac8fa6258f0198549.jpg">
+                <div class="row doc-section">
+                  <div class="col-xs-5 doc-name">
+                    <a href="doctor/kurginjan-khachatur-mikhajjlovich" target="_blank">
+                      <img class="avatar" src="https://cdn.doctu.ru/images/thumb/74x110/74x110-1492e3666b513c2e33bc888ef53fe315.jpg" width="74" alt="Флеболог, Хирург-флеболог Кургинян Хачатур Михайлович"/>
+                      <h4 class="h3">Кургинян</h4>
+                      <h4>Хачатур Михайлович</h4>
+                    </a>
+                    <div class="specialty">
+                      <h3><a href='/doctors/flebolog'>Флеболог</a></h3>
+                      , 
+                      <h3><a href='/doctors/xirurg-flebolog'>Хирург-флеболог</a></h3>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 doc-options">
+                    <div class="metro"><span class='linemsk7'>Лермонтовский проспект</span> </div>
+                    <div class="address"><img src="/assets/templates/design/less/img/address.png"><a class="mapModal" href="#mapModal" data-mapId='map' data-markLat='55.698353' data-markLong='37.856346' data-mapZoom='15' data-markHeader='<a href="http://medongroup.doctu.ru/">Medical On Group - Люберцы</a>' data-markContent='Московская область, г. Люберцы, Октябрьский пр-кт, д. 5'>Московская область, г. Люберцы, Октябрьский пр-кт, д. 5</a></div>
+                    <div class="experience"><img src="/assets/templates/design/less/img/experience.png">Стаж не задан</div>
+                    <div class="consult"><img src="/assets/templates/design/less/img/consult.png"><b>Консультация — 1790<span class='rub'>Р</span></b></div>
+                  </div>
+                  <div class="col-xs-3 doc-request">
+                    <div class="rating">0.0</div>
+                    <div class="star-rating"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"></div>
+                    <div class="reviews"><a class="doctorReview" href="doctor/kurginjan-khachatur-mikhajjlovich#feedback">Нет отзывов</a></div>
+                    <button class="btn btn-success showPhoneScheduleBtn">Записаться на прием</button>
+                  </div>
+                </div>
+                <div class="collapse doc-table-sect doctorScheduleCollapse" >   
+                </div>
+                <div id="ajaxClinicPriceReq" class="services-list">
+                </div>
+                <div id="ajaxPricelist" class="collapse doc-table-sect services-list doctorPricelist">
+                  <h3 class="head">Услуги и цены</h3>
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="loading"></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr class="clearfix">
+              </section>
+              <section class="doc" 
+                data-doctor="fI9mIRIhBnqYKvVw" 
+                data-name="Альфия Юсефовна" 
+                data-family="Шмидт" 
+                data-speciality="Врач УЗИ" 
+                data-photo="https://cdn.doctu.ru/images/thumb/74x110/74x110-6806aa9d3277acd5d95e7c081b6ff750.jpg" 
+                data-metro="<span class='linemsk7'>Лермонтовский проспект</span> " 
+                data-address="Московская область, г. Люберцы, Октябрьский пр-кт, д. 5"  
+                data-clinicphone="+7(495)510‑43‑01"
+                data-clinicurl="medongroup.doctu.ru/"
+                data-clinicLogo="https://cdn.doctu.ru/images/thumb/74x74/74x74-632bd7ca72397e6ac8fa6258f0198549.jpg">
+                <div class="row doc-section">
+                  <div class="col-xs-5 doc-name">
+                    <a href="doctor/shmidt-alfija-jusefovna" target="_blank">
+                      <img class="avatar" src="https://cdn.doctu.ru/images/thumb/74x110/74x110-6806aa9d3277acd5d95e7c081b6ff750.jpg" width="74" alt="Врач УЗИ Шмидт Альфия Юсефовна"/>
+                      <h4 class="h3">Шмидт</h4>
+                      <h4>Альфия Юсефовна</h4>
+                    </a>
+                    <div class="specialty">
+                      <h3><a href='/doctors/vrach-uzi'>Врач УЗИ</a></h3>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 doc-options">
+                    <div class="metro"><span class='linemsk7'>Лермонтовский проспект</span> </div>
+                    <div class="address"><img src="/assets/templates/design/less/img/address.png"><a class="mapModal" href="#mapModal" data-mapId='map' data-markLat='55.698353' data-markLong='37.856346' data-mapZoom='15' data-markHeader='<a href="http://medongroup.doctu.ru/">Medical On Group - Люберцы</a>' data-markContent='Московская область, г. Люберцы, Октябрьский пр-кт, д. 5'>Московская область, г. Люберцы, Октябрьский пр-кт, д. 5</a></div>
+                    <div class="experience"><img src="/assets/templates/design/less/img/experience.png">Стаж не задан</div>
+                    <div class="consult"><img src="/assets/templates/design/less/img/consult.png"><strong>Стоимость не указана</strong></div>
+                  </div>
+                  <div class="col-xs-3 doc-request">
+                    <div class="rating">0.0</div>
+                    <div class="star-rating"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"></div>
+                    <div class="reviews"><a class="doctorReview" href="doctor/shmidt-alfija-jusefovna#feedback">Нет отзывов</a></div>
+                    <button class="btn btn-success showPhoneScheduleBtn">Записаться на прием</button>
+                  </div>
+                </div>
+                <div class="collapse doc-table-sect doctorScheduleCollapse" >   
+                </div>
+                <div id="ajaxClinicPriceReq" class="services-list">
+                </div>
+                <div id="ajaxPricelist" class="collapse doc-table-sect services-list doctorPricelist">
+                  <h3 class="head">Услуги и цены</h3>
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="loading"></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr class="clearfix">
+              </section>
+              <section class="doc" 
+                data-doctor="hipdZ7n78zPJR4Bd" 
+                data-name="Рустам Хасбиевич" 
+                data-family="Кушхов" 
+                data-speciality="Акушер-гинеколог, Гинеколог, Акушер" 
+                data-photo="https://cdn.doctu.ru/images/thumb/74x110/74x110-1cc739c6a57111fcb3a8a0ee8e13ae1d.jpg" 
+                data-metro="<span class='linemsk7'>Текстильщики</span> " 
+                data-address="Волгоградский проспект, д.42, к.1"  
+                data-clinicphone="+7(495)966‑02‑52"
+                data-clinicurl="smclinic.doctu.ru/"
+                data-clinicLogo="https://cdn.doctu.ru/images/thumb/74x74/74x74-856225d464d20d5d1d42b06e34991a0e.jpg">
+                <div class="row doc-section">
+                  <div class="col-xs-5 doc-name">
+                    <a href="doctor/kushkhov-rustam-khasbievich" target="_blank">
+                      <img class="avatar" src="https://cdn.doctu.ru/images/thumb/74x110/74x110-1cc739c6a57111fcb3a8a0ee8e13ae1d.jpg" width="74" alt="Акушер-гинеколог, Гинеколог, Акушер Кушхов Рустам Хасбиевич"/>
+                      <h4 class="h3">Кушхов</h4>
+                      <h4>Рустам Хасбиевич</h4>
+                    </a>
+                    <div class="specialty">
+                      <h3><a href='/doctors/akusher-ginekolog'>Акушер-гинеколог</a></h3>
+                      , 
+                      <h3><a href='/doctors/ginekolog'>Гинеколог</a></h3>
+                      , 
+                      <h3><a href='/doctors/akusher'>Акушер</a></h3>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 doc-options">
+                    <div class="metro"><span class='linemsk7'>Текстильщики</span> </div>
+                    <div class="address"><img src="/assets/templates/design/less/img/address.png"><a class="mapModal" href="#mapModal" data-mapId='map' data-markLat='55.708374' data-markLong='37.726070' data-mapZoom='16' data-markHeader='<a href="http://smclinic.doctu.ru/">СМ-Клиника на Волгоградском</a>' data-markContent='Волгоградский проспект, д.42, к.1'>Волгоградский проспект, д.42, к.1</a></div>
+                    <div class="experience"><img src="/assets/templates/design/less/img/experience.png">Стаж — 9 лет</div>
+                    <div class="consult"><img src="/assets/templates/design/less/img/consult.png"><b>Консультация — от 1300<span class='rub'>Р</span></b></div>
+                  </div>
+                  <div class="col-xs-3 doc-request">
+                    <div class="rating">0.0</div>
+                    <div class="star-rating"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"></div>
+                    <div class="reviews"><a class="doctorReview" href="doctor/kushkhov-rustam-khasbievich#feedback">Нет отзывов</a></div>
+                    <button class="btn btn-success showPhoneScheduleBtn">Записаться на прием</button>
+                  </div>
+                </div>
+                <div class="collapse doc-table-sect doctorScheduleCollapse" >   
+                </div>
+                <div id="ajaxClinicPriceReq" class="services-list">
+                </div>
+                <div id="ajaxPricelist" class="collapse doc-table-sect services-list doctorPricelist">
+                  <h3 class="head">Услуги и цены</h3>
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="loading"></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr class="clearfix">
+              </section>
+              <section class="doc" 
+                data-doctor="Ro07jIp33DqDPKjT" 
+                data-name="Ксения Алексеевна" 
+                data-family="Голубева" 
+                data-speciality="Окулист (офтальмолог)" 
+                data-photo="https://cdn.doctu.ru/images/thumb/74x110/74x110-ac6169c6e639e516f3dad5eb12cc7b70.jpg" 
+                data-metro="<span class='linemsk7'>Текстильщики</span> " 
+                data-address="Волгоградский проспект, д.42, к.1"  
+                data-clinicphone="+7(495)966‑02‑52"
+                data-clinicurl="smclinic.doctu.ru/"
+                data-clinicLogo="https://cdn.doctu.ru/images/thumb/74x74/74x74-856225d464d20d5d1d42b06e34991a0e.jpg">
+                <div class="row doc-section">
+                  <div class="col-xs-5 doc-name">
+                    <a href="doctor/golubeva-ksenija-alekseevna" target="_blank">
+                      <img class="avatar" src="https://cdn.doctu.ru/images/thumb/74x110/74x110-ac6169c6e639e516f3dad5eb12cc7b70.jpg" width="74" alt="Окулист (офтальмолог) Голубева Ксения Алексеевна"/>
+                      <h4 class="h3">Голубева</h4>
+                      <h4>Ксения Алексеевна</h4>
+                    </a>
+                    <div class="specialty">
+                      <h3><a href='/doctors/okulist-oftalmolog'>Окулист (офтальмолог)</a></h3>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 doc-options">
+                    <div class="metro"><span class='linemsk7'>Текстильщики</span> </div>
+                    <div class="address"><img src="/assets/templates/design/less/img/address.png"><a class="mapModal" href="#mapModal" data-mapId='map' data-markLat='55.708374' data-markLong='37.726070' data-mapZoom='16' data-markHeader='<a href="http://smclinic.doctu.ru/">СМ-Клиника на Волгоградском</a>' data-markContent='Волгоградский проспект, д.42, к.1'>Волгоградский проспект, д.42, к.1</a></div>
+                    <div class="experience"><img src="/assets/templates/design/less/img/experience.png">Стаж — 3 года</div>
+                    <div class="consult"><img src="/assets/templates/design/less/img/consult.png"><b>Консультация — 1300<span class='rub'>Р</span></b></div>
+                  </div>
+                  <div class="col-xs-3 doc-request">
+                    <div class="rating">0.0</div>
+                    <div class="star-rating"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"></div>
+                    <div class="reviews"><a class="doctorReview" href="doctor/golubeva-ksenija-alekseevna#feedback">Нет отзывов</a></div>
+                    <button class="btn btn-success showPhoneScheduleBtn">Записаться на прием</button>
+                  </div>
+                </div>
+                <div class="collapse doc-table-sect doctorScheduleCollapse" >   
+                </div>
+                <div id="ajaxClinicPriceReq" class="services-list">
+                </div>
+                <div id="ajaxPricelist" class="collapse doc-table-sect services-list doctorPricelist">
+                  <h3 class="head">Услуги и цены</h3>
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="loading"></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr class="clearfix">
+              </section>
+              <section class="doc" 
+                data-doctor="kzCgRlvQtg1yILLy" 
+                data-name="Любовь Евгеньевна" 
+                data-family="Виткина" 
+                data-speciality="Терапевт, Физиотерапевт" 
+                data-photo="https://cdn.doctu.ru/images/thumb/74x110/74x110-b8e89598034ca700c10ac51633d83515.jpg" 
+                data-metro="<span class='linemsk7'>Текстильщики</span> " 
+                data-address="Волгоградский проспект, д.42, к.1"  
+                data-clinicphone="+7(495)966‑02‑52"
+                data-clinicurl="smclinic.doctu.ru/"
+                data-clinicLogo="https://cdn.doctu.ru/images/thumb/74x74/74x74-856225d464d20d5d1d42b06e34991a0e.jpg">
+                <div class="row doc-section">
+                  <div class="col-xs-5 doc-name">
+                    <a href="doctor/vitkina-ljubov-evgenevna" target="_blank">
+                      <img class="avatar" src="https://cdn.doctu.ru/images/thumb/74x110/74x110-b8e89598034ca700c10ac51633d83515.jpg" width="74" alt="Терапевт, Физиотерапевт Виткина Любовь Евгеньевна"/>
+                      <h4 class="h3">Виткина</h4>
+                      <h4>Любовь Евгеньевна</h4>
+                    </a>
+                    <div class="specialty">
+                      <h3><a href='/doctors/terapevt'>Терапевт</a></h3>
+                      , 
+                      <h3><a href='/doctors/fizioterapevt'>Физиотерапевт</a></h3>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 doc-options">
+                    <div class="metro"><span class='linemsk7'>Текстильщики</span> </div>
+                    <div class="address"><img src="/assets/templates/design/less/img/address.png"><a class="mapModal" href="#mapModal" data-mapId='map' data-markLat='55.708374' data-markLong='37.726070' data-mapZoom='16' data-markHeader='<a href="http://smclinic.doctu.ru/">СМ-Клиника на Волгоградском</a>' data-markContent='Волгоградский проспект, д.42, к.1'>Волгоградский проспект, д.42, к.1</a></div>
+                    <div class="experience"><img src="/assets/templates/design/less/img/experience.png">Стаж — 15 лет</div>
+                    <div class="consult"><img src="/assets/templates/design/less/img/consult.png"><b>Консультация — 1300<span class='rub'>Р</span></b></div>
+                  </div>
+                  <div class="col-xs-3 doc-request">
+                    <div class="rating">0.0</div>
+                    <div class="star-rating"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"></div>
+                    <div class="reviews"><a class="doctorReview" href="doctor/vitkina-ljubov-evgenevna#feedback">Нет отзывов</a></div>
+                    <button class="btn btn-success showPhoneScheduleBtn">Записаться на прием</button>
+                  </div>
+                </div>
+                <div class="collapse doc-table-sect doctorScheduleCollapse" >   
+                </div>
+                <div id="ajaxClinicPriceReq" class="services-list">
+                </div>
+                <div id="ajaxPricelist" class="collapse doc-table-sect services-list doctorPricelist">
+                  <h3 class="head">Услуги и цены</h3>
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="loading"></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr class="clearfix">
+              </section>
+              <section class="doc" 
+                data-doctor="pr2gOJJKW0pPSR1J" 
+                data-name="Ольга Владимировна" 
+                data-family="Азаренкова" 
+                data-speciality="Нефролог" 
+                data-photo="https://cdn.doctu.ru/images/thumb/74x110/74x110-a777269bad2a3016057cd4c4f33fc8b9.jpg" 
+                data-metro="<span class='linemsk2'>Войковская</span> " 
+                data-address="ул. Приорова, д.36 "  
+                data-clinicphone="+7(495)777‑48‑49"
+                data-clinicurl=" smdoctor.doctu.ru/"
+                data-clinicLogo="https://cdn.doctu.ru/images/thumb/74x74/74x74-23fc292c55f262cb0b6e8bcb74056477.jpg">
+                <div class="row doc-section">
+                  <div class="col-xs-5 doc-name">
+                    <a href="doctor/azarenkova-olga-vladimirovna" target="_blank">
+                      <img class="avatar" src="https://cdn.doctu.ru/images/thumb/74x110/74x110-a777269bad2a3016057cd4c4f33fc8b9.jpg" width="74" alt="Нефролог Азаренкова Ольга Владимировна"/>
+                      <h4 class="h3">Азаренкова</h4>
+                      <h4>Ольга Владимировна</h4>
+                    </a>
+                    <div class="specialty">
+                      <h3><a href='/doctors/nefrolog'>Нефролог</a></h3>
+                      <br/><span>Детский</span> <span>Взрослый</span>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 doc-options">
+                    <div class="metro"><span class='linemsk2'>Войковская</span> </div>
+                    <div class="address"><img src="/assets/templates/design/less/img/address.png"><a class="mapModal" href="#mapModal" data-mapId='map' data-markLat='55.824795' data-markLong='37.520847' data-mapZoom='16' data-markHeader='<a href="http:// smdoctor.doctu.ru/">СМ-Доктор на ул. Приорова</a>' data-markContent='ул. Приорова, д.36 '>ул. Приорова, д.36 </a></div>
+                    <div class="experience"><img src="/assets/templates/design/less/img/experience.png">Стаж — 10 лет</div>
+                    <div class="consult"><img src="/assets/templates/design/less/img/consult.png"><b>Консультация — 1300<span class='rub'>Р</span></b></div>
+                  </div>
+                  <div class="col-xs-3 doc-request">
+                    <div class="rating">0.0</div>
+                    <div class="star-rating"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"></div>
+                    <div class="reviews"><a class="doctorReview" href="doctor/azarenkova-olga-vladimirovna#feedback">Нет отзывов</a></div>
+                    <button class="btn btn-success showPhoneScheduleBtn">Записаться на прием</button>
+                  </div>
+                </div>
+                <div class="collapse doc-table-sect doctorScheduleCollapse" >   </div>
+                <div id="ajaxClinicPriceReq" class="services-list">
+                </div>
+                <div id="ajaxPricelist" class="collapse doc-table-sect services-list doctorPricelist">
+                  <h3 class="head">Услуги и цены</h3>
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="loading"></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr class="clearfix">
+              </section>
+              <section class="doc" 
+                data-doctor="twgigCl9kzw5hpuM" 
+                data-name="Валерия Александровна" 
+                data-family="Аксенова" 
+                data-speciality="Психолог" 
+                data-photo="https://cdn.doctu.ru/images/thumb/74x110/74x110-ed11239330595d7c6702d05635df560d.jpg" 
+                data-metro="<span class='linemsk2'>Войковская</span> " 
+                data-address="ул. Приорова, д.36 "  
+                data-clinicphone="+7(495)777‑48‑49"
+                data-clinicurl=" smdoctor.doctu.ru/"
+                data-clinicLogo="https://cdn.doctu.ru/images/thumb/74x74/74x74-23fc292c55f262cb0b6e8bcb74056477.jpg">
+                <div class="row doc-section">
+                  <div class="col-xs-5 doc-name">
+                    <a href="doctor/aksenova-valerija-aleksandrovna" target="_blank">
+                      <img class="avatar" src="https://cdn.doctu.ru/images/thumb/74x110/74x110-ed11239330595d7c6702d05635df560d.jpg" width="74" alt="Психолог Аксенова Валерия Александровна"/>
+                      <h4 class="h3">Аксенова</h4>
+                      <h4>Валерия Александровна</h4>
+                    </a>
+                    <div class="specialty">
+                      <h3><a href='/doctors/psikholog'>Психолог</a></h3>
+                      <br/><span>Детский</span>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 doc-options">
+                    <div class="metro"><span class='linemsk2'>Войковская</span> </div>
+                    <div class="address"><img src="/assets/templates/design/less/img/address.png"><a class="mapModal" href="#mapModal" data-mapId='map' data-markLat='55.824795' data-markLong='37.520847' data-mapZoom='16' data-markHeader='<a href="http:// smdoctor.doctu.ru/">СМ-Доктор на ул. Приорова</a>' data-markContent='ул. Приорова, д.36 '>ул. Приорова, д.36 </a></div>
+                    <div class="experience"><img src="/assets/templates/design/less/img/experience.png">Стаж — 2 года</div>
+                    <div class="consult"><img src="/assets/templates/design/less/img/consult.png"><b>Консультация — 1300<span class='rub'>Р</span></b></div>
+                  </div>
+                  <div class="col-xs-3 doc-request">
+                    <div class="rating">0.0</div>
+                    <div class="star-rating"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"><img src="/assets/templates/design/less/img/nostar2.png"></div>
+                    <div class="reviews"><a class="doctorReview" href="doctor/aksenova-valerija-aleksandrovna#feedback">Нет отзывов</a></div>
+                    <button class="btn btn-success showPhoneScheduleBtn">Записаться на прием</button>
+                  </div>
+                </div>
+                <div class="collapse doc-table-sect doctorScheduleCollapse" >   </div>
+                <div id="ajaxClinicPriceReq" class="services-list">
+                </div>
+                <div id="ajaxPricelist" class="collapse doc-table-sect services-list doctorPricelist">
+                  <h3 class="head">Услуги и цены</h3>
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="loading"></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr class="clearfix">
+              </section>
+              <data hidden data-url="/doctors"></data>
+            </section>
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="row">
+          <div class="col-xs-6 copy"> 
+            &copy; 2012-2014 Doctu.ru &mdash; запись к врачу в <a href="http://msk.doctu.ru">Москве</a>, <a href="http://doctu.ru">Санкт-Петербурге</a>
+          </div>
+          <div class="col-xs-6 text-right">
+            <ul class="list-inline">
+              <!-- li><img class="icon-sm" src="assets/templates/design/img/star.png"><a class="" href="partners">Партнерство для клиник</a></li>
+                <li><a class="" href="about">О проекте</a></li -->
+              <li><a class="" href="library">Справочник пациента</a></li>
+              <li><a class="" href="terms">Пользовательское соглашение</a></li>
+              <li><a class="" href="contacts">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+#accordion {
+	min-width: 200px;
+	.ico-collapse {
+		float: right;
+		display: inline-block;
+		width: 14px;
+		margin-top: 2px;
+		height: 14px;
+		background-image: url(../img/ico-arrow.png);
+		background-position: top left;
+		background-repeat: no-repeat;
+	}
+	.panel-heading {
+		padding: 16px 15px;
+		background-color: #f8f9f9;
+		border-color:#eaeef3;
+	}
+	.panel {
+		box-shadow: none;
+		-webkit-box-shadow:none;
+	}
+	.panel.open {
+		.ico-collapse {
+			background-position: 0px -14px;
+			margin-top: 6px;
+		}
+		.panel-heading {
+			background-color: #fff;
+		}
+	}
+	.panel-title a {
+		display: block;
+		cursor: pointer;
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: bold;
+		color:#717171;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	.panel-default {
+		border-color:#eaeef3;
+	}
+	.panel-default > .panel-heading + .panel-collapse .panel-body {
+		border-top-color:#eaeef3;
+	}
+	.panel-body {
+		padding: 18px;
+	}
+	hr {	
+		margin-left: -18px;
+		margin-right: -18px;
+		border-color:#eaeef3;
+	}
+	.btn-primary {
+		background-color: #5951c1;
+		border-color:#5951c1;
+		text-transform: uppercase;
+		font-weight: bold;
+		color:#fff;
+	}
+	.btn-success {
+		background-color: #0c953f;
+		border-color:#0c953f;
+		text-transform: uppercase;
+		font-weight: bold;
+		white-space: normal;
+		text-align: center;
+		color:#fff;
+		background-image: none;
+	}
+	#vector {
+		margin-top: 20px;
+	}
+}
+#leftFilter #accordion {
+	.form-control {
+		font-size: 13px;
+		height: 40px;
+		padding: 6px 12px;
+		box-shadow: none;
+		-webkit-box-shadow:none;
+		border-color:#eaeef3;
+		color:#757575;
+		&.jq-selectbox {
+			padding: 0 10px;
+		}
+	}
+	:-ms-input-placeholder {
+		color:#757575;
+	}
+	:-moz-placeholder {
+		color:#757575;
+	}
+	::-moz-placeholder {
+		color:#757575;
+	}
+	::-webkit-input-placeholder {
+		color:#757575;
+	}
+}
+
+
+@import "jquery.formstyler";
