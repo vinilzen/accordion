@@ -40,6 +40,7 @@
 			text-decoration: none;
 		}
 	}
+
 	.panel-default {
 		border-color:#e3e3e3;
 	}
@@ -61,7 +62,7 @@
 		font-weight: bold;
 		color:#fff;
 		&:hover {
-			
+
 			background-color: #423ba4;
 			border-color: #3f389d;
 		}
@@ -95,7 +96,11 @@
 		margin-top: 20px;
 	}
 }
-#leftFilter #accordion {
+
+#leftFilter select.form-control + .chosen-container-multi .chosen-choices li.search-choice {
+	width: 150px;
+}
+/* #leftFilter #accordion {
 	.form-control {
 		font-size: 13px;
 		height: 40px;
@@ -120,7 +125,4 @@
 	::-webkit-input-placeholder {
 		color:#757575;
 	}
-}
-
-
-@import "jquery.formstyler";
+} */

@@ -12,10 +12,10 @@ $(function(){
 			}
 		});
 
-
-	$('#accordion select').styler({
-		selectSearch:true,
-		// selectVisibleOptions:5
-	});
-
+    $("#doctorSpecialitySelectLeft, #doctorMetroSelectLeft, #clinicSpecialitySelectLeft, #clinicMetroSelectLeft").chosen({
+        no_results_text: 'Нет совпадений',
+        allow_single_deselect: true,
+        search_contains: true,
+        width: '100%'
+    });
 });
