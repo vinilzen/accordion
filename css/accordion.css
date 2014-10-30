@@ -16,6 +16,9 @@
   background-color: #f8f9f9;
   border-color: #e3e3e3;
 }
+#accordion .panel-heading:hover {
+  background-color: #fff;
+}
 #accordion .panel.open .ico-collapse {
   background-position: 0px -14px;
   margin-top: 6px;
